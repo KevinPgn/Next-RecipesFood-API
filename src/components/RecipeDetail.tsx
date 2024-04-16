@@ -3,6 +3,7 @@
 import { ButtonFavorite } from "./ui/ButtonFavorite"
 
 export const RecipeDetail = ({recipe}:any) => {
+  
   return (
     <>
       <div className="flex flex-col md:flex-row justify-center md:gap-38 mx-auto max-w-[1300px] mt-10">
@@ -13,7 +14,7 @@ export const RecipeDetail = ({recipe}:any) => {
         <div className="mt-5 mx-auto md:mt-0 flex flex-col">
           <span className="text-md font-bold text-green-600">{recipe.data.recipe.publisher}</span>
           <span className="text-2xl font-bold mt-2 text-gray-800">{recipe.data.recipe.title}</span>
-          <ButtonFavorite />
+          <ButtonFavorite recipe={recipe}/>
 
           <div className="mt-5">
             <span className="font-bold text-lg">Ingredients:</span>
